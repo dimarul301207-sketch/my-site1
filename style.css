@@ -1,110 +1,99 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MySite</title>
+/* ===== ОСНОВНЕ ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+/* ===== NAVBAR ===== */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
+.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+}
 
-<body>
+/* ===== HERO (ГОЛОВНА СТОРІНКА) ===== */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1498579150354-977475b7ea0b');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">MySite</a>
+/* ===== КНОПКИ ===== */
+.btn-primary {
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+.btn-primary:hover {
+  transform: scale(1.05);
+}
 
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Головна</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Послуги</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Контакти</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+/* ===== КАРТКИ (ГОЛОВНА) ===== */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+}
 
-<!-- HERO -->
-<section class="hero text-white text-center d-flex align-items-center">
-  <div class="container">
-    <h1 class="display-4 fw-bold">Сучасний веб-сайт</h1>
-    <p class="lead">Створено за допомогою Bootstrap</p>
-    <a href="#" class="btn btn-primary btn-lg">Почати</a>
-  </div>
-</section>
+.card:hover {
+  transform: translateY(-5px);
+}
 
-<!-- FEATURES -->
-<section class="container mt-5">
-  <div class="row text-center">
-    
-    <div class="col-md-4">
-      <div class="card p-4 shadow-sm">
-        <h4>Швидкість</h4>
-        <p>Сайт працює швидко та стабільно</p>
-      </div>
-    </div>
+/* ===== ПРОДУКТИ (TOMATO PAGE) ===== */
+.product-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  background: white;
+}
 
-    <div class="col-md-4">
-      <div class="card p-4 shadow-sm">
-        <h4>Дизайн</h4>
-        <p>Сучасний та адаптивний інтерфейс</p>
-      </div>
-    </div>
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+}
 
-    <div class="col-md-4">
-      <div class="card p-4 shadow-sm">
-        <h4>Простота</h4>
-        <p>Легкий у використанні</p>
-      </div>
-    </div>
+.product-card:hover {
+  transform: scale(1.05);
+}
 
-  </div>
-</section>
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+}
 
-<!-- CONTENT -->
-<section class="container mt-5">
-  <div class="row">
-    
-    <div class="col-md-8">
-      <h2>Про сайт</h2>
-      <p>Це приклад сучасної головної сторінки з використанням Bootstrap.</p>
+/* ===== FOOTER ===== */
+footer {
+  background: #000;
+  color: white;
+}
 
-      <div class="card p-3 mt-3 shadow-sm">
-        <h5>Остання новина</h5>
-        <p>Ми створили новий дизайн для цього сайту 🔥</p>
-      </div>
-    </div>
+/* ===== ТЕКСТ ===== */
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
 
-    <div class="col-md-4">
-      <div class="p-3 bg-light shadow-sm rounded">
-        <h4>Меню</h4>
-        <ul class="list-unstyled">
-          <li>✔ Головна</li>
-          <li>✔ Послуги</li>
-          <li>✔ Контакти</li>
-        </ul>
-      </div>
-    </div>
+p {
+  color: #555;
+}
 
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-black text-white text-center p-4 mt-5">
-  <p class="mb-0">© 2026 MySite | Всі права захищені</p>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    text-align: center;
+  }
+}
