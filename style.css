@@ -1,48 +1,79 @@
-/* ===== ОСНОВНЕ ===== */
+/* ===== ОСНОВА ===== */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 /* ===== NAVBAR ===== */
 .navbar {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: white !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar a {
+  color: #333 !important;
+  font-size: 14px;
 }
 
 .navbar-brand {
+  color: #2e7d32 !important;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
 }
 
-/* ===== HERO (ГОЛОВНА СТОРІНКА) ===== */
-.hero {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('https://images.unsplash.com/photo-1498579150354-977475b7ea0b');
+/* ===== HERO (як в Figma) ===== */
+.hero-home {
+  height: 85vh;
+  background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
   color: white;
 }
 
-/* ===== КНОПКИ ===== */
-.btn-primary {
-  border-radius: 25px;
+.hero-home h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.hero-home .btn {
+  background: #4caf50;
+  border: none;
   padding: 10px 25px;
-  transition: 0.3s;
+  border-radius: 3px;
 }
 
-.btn-primary:hover {
-  transform: scale(1.05);
+/* ===== ІКОНКИ ===== */
+.icons-section .col {
+  font-size: 14px;
+  color: #777;
 }
 
-/* ===== КАРТКИ (ГОЛОВНА) ===== */
+.icons-section p {
+  margin-top: 10px;
+}
+
+/* ===== VISION / MISSION ===== */
+section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== КАРТКИ ===== */
 .card {
   border: none;
-  border-radius: 15px;
+  border-radius: 5px;
+  background: white;
   transition: 0.3s;
 }
 
@@ -50,50 +81,63 @@ body {
   transform: translateY(-5px);
 }
 
-/* ===== ПРОДУКТИ (TOMATO PAGE) ===== */
+/* ===== TOMATO GRID ===== */
 .product-card {
   border: none;
-  border-radius: 15px;
+  background: white;
+  border-radius: 5px;
   overflow: hidden;
   transition: 0.3s;
-  background: white;
 }
 
 .product-card img {
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 
 .product-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* ===== SIDEBAR ===== */
-.sidebar {
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
+/* ===== PRODUCT PAGE ===== */
+.product-title {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.product-price {
+  color: #2e7d32;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ===== КНОПКИ ===== */
+.btn-success {
+  background: #4caf50;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 3px;
+}
+
+.btn-success:hover {
+  background: #388e3c;
 }
 
 /* ===== FOOTER ===== */
 footer {
-  background: #000;
-  color: white;
-}
-
-/* ===== ТЕКСТ ===== */
-h1, h2, h3, h4 {
-  font-weight: bold;
-}
-
-p {
-  color: #555;
+  background: #2f3e3e;
+  color: #ccc;
+  font-size: 13px;
+  padding: 15px 0;
 }
 
 /* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
-  .hero {
+  .hero-home {
     height: 60vh;
-    text-align: center;
+  }
+
+  .hero-home h1 {
+    font-size: 26px;
   }
 }
